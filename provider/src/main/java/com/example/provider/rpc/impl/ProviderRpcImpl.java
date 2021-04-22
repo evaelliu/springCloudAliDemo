@@ -4,7 +4,7 @@ import com.example.providerapi.ProviderRpcService;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Value;
 
-@Service
+@Service(interfaceClass = ProviderRpcService.class)
 public class ProviderRpcImpl implements ProviderRpcService {
 
     @Value("${server.port}")
@@ -12,6 +12,6 @@ public class ProviderRpcImpl implements ProviderRpcService {
 
     @Override
     public String provide() {
-        return currentPort;
+        return "rpc:"+currentPort;
     }
 }

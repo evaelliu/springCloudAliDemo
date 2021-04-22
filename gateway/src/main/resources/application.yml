@@ -1,0 +1,18 @@
+## gateway
+spring:
+  cloud.gateway:
+    discovery:
+      locator:
+        enabled: true
+        lower-case-service-id: true
+    globalcors:
+      corsConfigurations:
+        '[/**]':
+          allowedOrigins: "*"
+          allowedMethods: "*"
+          allowCredentials: true
+          allowedHeaders: "*"
+
+    httpclient:
+      ssl:
+        useInsecureTrustManager: true

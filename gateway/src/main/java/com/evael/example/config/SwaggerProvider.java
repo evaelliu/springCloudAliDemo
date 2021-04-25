@@ -1,4 +1,4 @@
-package com.xietong.phoenix.config;
+package com.evael.example.config;
 
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

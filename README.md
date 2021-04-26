@@ -4,21 +4,21 @@ nacos GitHub仓库：https://github.com/alibaba/nacos.git
 
 nacos dockerhub仓库：https://registry.hub.docker.com/r/nacos/nacos-server
 
-demo包括内容
+**demo包括内容**
 
     nacos作为spring cloud 注册中心使用（可替代eureka）
     nacos作为dubbo 注册中心使用（可替代zookeeper）
     nacos作为配置中心使用（可替代apollo）
     附：spring cloud gateway 与 nacos集成；spring cloud gateway与knife4j(swagger)集成实现api文档聚合
 
-0.nacos安装部署
+**0.nacos安装部署**
 
     1.官网下载安装，略
     2.docker安装，进入项目docker-compose目录，执行docker-compose -f docker-compose-nacos.yml up -d启动
 
     验证：http://localhost:8848/nacos nacos/nacos可正常登录即部署完成
 
-1.nacos作为spring cloud 注册中心使用
+**1.nacos作为spring cloud 注册中心使用**
 
 添加依赖
 
@@ -41,7 +41,7 @@ demo包括内容
 
 验证：启动集成服务，打开nacos管理界面查看
 
-2.nacos作为dubbo注册中心使用
+**2.nacos作为dubbo注册中心使用**
 
 基于原有dubbo服务
 
@@ -59,7 +59,7 @@ demo包括内容
 
 验证：启动集成服务，打开nacos管理界面查看
 
-3. nacos作为配置中心使用
+**3. nacos作为配置中心使用**
     
 添加依赖 
 
@@ -82,7 +82,7 @@ bootstrap.yml添加配置
 读取配置类添加@RefreshScope注解
 验证：nacos管理界面添加 applicationname.yml配置，在服务内读取
 
-附：gateway集成swagger,knife4j
+**附：gateway集成swagger,knife4j**
 添加依赖：
 
     <dependency>

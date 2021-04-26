@@ -20,7 +20,7 @@ nacos dockerhub仓库：https://registry.hub.docker.com/r/nacos/nacos-server
 
 # **1.nacos作为spring cloud 注册中心使用**
 
-## 添加依赖
+添加依赖
 
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -28,7 +28,7 @@ nacos dockerhub仓库：https://registry.hub.docker.com/r/nacos/nacos-server
             <version>2.2.0.RELEASE</version>
         </dependency>
 
-## 配置文件 bootstrap.yml 添加配置
+配置文件 bootstrap.yml 添加配置
 
     spring:
         cloud:
@@ -37,15 +37,15 @@ nacos dockerhub仓库：https://registry.hub.docker.com/r/nacos/nacos-server
                     server-addr: ${REGISTER_HOST:nacos}:${REGISTER_PORT:8848}
                     namespace: dev
 
-## 然后配置完成
+然后配置完成
 
-## 验证：启动集成服务，打开nacos管理界面查看
+验证：启动集成服务，打开nacos管理界面查看
 
 # **2.nacos作为dubbo注册中心使用**
 
-## 基于原有dubbo服务
+基于原有dubbo服务
 
-## 添加依赖
+添加依赖
 
         <dependency>
             <groupId>org.apache.dubbo</groupId>
@@ -53,15 +53,15 @@ nacos dockerhub仓库：https://registry.hub.docker.com/r/nacos/nacos-server
             <version>2.7.5</version>
         </dependency>
 
-## 修改配置
+修改配置
 
     dubbo.registry.address=nacos://nacos:8848
 
-## 验证：启动集成服务，打开nacos管理界面查看
+验证：启动集成服务，打开nacos管理界面查看
 
 # **3. nacos作为配置中心使用**
     
-## 添加依赖 
+添加依赖 
 
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -69,7 +69,7 @@ nacos dockerhub仓库：https://registry.hub.docker.com/r/nacos/nacos-server
             <version>2.2.0.RELEASE</version>
         </dependency>
 
-## bootstrap.yml添加配置
+bootstrap.yml添加配置
 
     spring:
         cloud:
@@ -79,18 +79,18 @@ nacos dockerhub仓库：https://registry.hub.docker.com/r/nacos/nacos-server
                     namespace: dev
                     file-extension: yml
 
-## 读取配置类添加@RefreshScope注解
-## 验证：nacos管理界面添加 applicationname.yml配置，在服务内读取
+读取配置类添加@RefreshScope注解
+验证：nacos管理界面添加 applicationname.yml配置，在服务内读取
 
 # **附：gateway集成swagger,knife4j**
-## 添加依赖：
+添加依赖：
 
     <dependency>
         <groupId>com.github.xiaoymin</groupId>
         <artifactId>knife4j-spring-boot-starter</artifactId>
         <version>3.0.2</version>
     </dependency>
-## 启动类添加 @EnableKnife4j
-## gateway模块config目录文件直接使用
-## 启动gateway项目
-## 本地访问 http://localhost:8088/doc.html(8088为gateway端口)
+启动类添加 @EnableKnife4j
+gateway模块config目录文件直接使用
+启动gateway项目
+本地访问 http://localhost:8088/doc.html(8088为gateway端口)

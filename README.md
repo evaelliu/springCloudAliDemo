@@ -9,6 +9,7 @@ demo包括内容
     nacos作为spring cloud 注册中心使用（可替代eureka）
     nacos作为dubbo 注册中心使用（可替代zookeeper）
     nacos作为配置中心使用（可替代apollo）
+    附：spring cloud gateway 与 nacos集成；spring cloud gateway与knife4j(swagger)继承实现api文档聚合
 
 0.nacos安装部署
 

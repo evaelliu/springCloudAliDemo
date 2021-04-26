@@ -6,7 +6,7 @@ nacos dockerhub仓库：https://registry.hub.docker.com/r/nacos/nacos-server
 
 [demo包括内容]
 
-    nacos作为spring cloud 注册中心使用（替代）
+    nacos作为spring cloud 注册中心使用（替代eureka）
     nacos作为dubbo 注册中心使用（替代zookeeper）
     nacos作为配置中心使用（替代apollo）
 

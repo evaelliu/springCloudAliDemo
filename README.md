@@ -4,11 +4,11 @@ nacos GitHub仓库：https://github.com/alibaba/nacos.git
 
 nacos dockerhub仓库：https://registry.hub.docker.com/r/nacos/nacos-server
 
-[demo包括内容]
+demo包括内容
 
-    nacos作为spring cloud 注册中心使用（替代eureka）
-    nacos作为dubbo 注册中心使用（替代zookeeper）
-    nacos作为配置中心使用（替代apollo）
+    nacos作为spring cloud 注册中心使用（可替代eureka）
+    nacos作为dubbo 注册中心使用（可替代zookeeper）
+    nacos作为配置中心使用（可替代apollo）
 
 0.nacos安装部署
 

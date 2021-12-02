@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${REGISTER_HOST:nacos}:${REGISTER_PORT:8848}
+        namespace: dev
+      config:
+        server-addr: ${REGISTER_HOST:nacos}:${REGISTER_PORT:8848}
+        namespace: dev
+        file-extension: yml
+
+dubbo:
+  application:
+    name: ${APPLICATION_NAME:consumer}
+  protocol:
+    name: dubbo
+    port: 20888
+  registry:
+    address: nacos://nacos:8848
+  consumer:
+    check: false

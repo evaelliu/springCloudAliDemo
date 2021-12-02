@@ -2,7 +2,7 @@ package com.example.consumer.controller;
 
 import com.example.consumer.ProviderFeignClient;
 import com.example.providerapi.ProviderRpcService;
-import org.apache.dubbo.config.annotation.Reference;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -16,7 +16,7 @@ public class ConsumerController {
     @Value("${test.consume:test}")
     private String consumeTest;
 
-    @Reference
+    @DubboReference
     ProviderRpcService providerRpcService;
 
     @Autowired

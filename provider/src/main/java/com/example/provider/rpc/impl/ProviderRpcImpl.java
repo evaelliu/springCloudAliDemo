@@ -1,10 +1,10 @@
 package com.example.provider.rpc.impl;
 
 import com.example.providerapi.ProviderRpcService;
-import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Value;
 
-@Service(interfaceClass = ProviderRpcService.class)
+@DubboService(interfaceClass = ProviderRpcService.class)
 public class ProviderRpcImpl implements ProviderRpcService {
 
     @Value("${server.port}")

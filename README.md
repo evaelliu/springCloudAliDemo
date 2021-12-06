@@ -84,6 +84,7 @@ bootstrap.yml添加配置
 
 # **附：gateway集成swagger,knife4j**
 gateway集成swagger,knife4j可实现基于服务发现自动聚合全局服务api文档
+
 添加依赖：
 
     <dependency>
